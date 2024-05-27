@@ -103,7 +103,7 @@ class AccountServiceTest {
 
         verify(accountRepository, times(1)).save(captor.capture());
         assertEquals(12L, accountDto.getUserId());
-        assertEquals("10000000000", captor.getValue().getAccountNumber());
+        assertEquals("1000000000", captor.getValue().getAccountNumber());
     }
 
     @Test

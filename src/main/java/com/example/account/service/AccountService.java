@@ -41,7 +41,7 @@ public class AccountService {
 
         String newAccountNumber = accountRepository.findFirstByOrderByIdDesc()
                 .map(account -> (Long.parseLong(account.getAccountNumber())) + 1 + "")
-                .orElse("10000000000");
+                .orElse("1000000000");
 
         return AccountDto.fromEntity(
                 accountRepository.save(Account.builder()
